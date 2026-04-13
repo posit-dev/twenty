@@ -1,0 +1,18 @@
+[project]
+name = "twenty"
+version = "0.1.0"
+description = "Incubator for tooling to install Posit Team products in twenty minutes or less"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+major_on_zero = false
+branch = "main"
+commit_message = "chore(release): {version}"
+tag_format = "v{version}"
+
+[tool.semantic_release.remote]
+ignore_token_for_push = true
+
+[tool.semantic_release.changelog]
+generate = true
+file = "CHANGELOG.md"
